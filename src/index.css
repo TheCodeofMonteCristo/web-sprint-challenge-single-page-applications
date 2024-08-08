@@ -1,13 +1,344 @@
+/* --text: #0a0a05;
+--background: #f2eed5;
+--primary: #c7d6ae;
+--secondary: #d6d9ea;
+--accent: #7052a3; */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 body {
+  background: #000D14;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  width: 100vw;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1 {
+margin: 1.5rem 1rem;
+font-size: 2rem;
+transition: all 0.3s ease-in-out;
+}
+
+h1:hover {
+  margin: 1.5rem 2rem;
+  font-size: 2rem;
+  color: #FC7531;
+  }
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #FFFFFF;
+  /* box-shadow: 0px 100px 200rem #86B361; */
+}
+
+.nav-links-container a {
+  text-decoration: none;
+  color: #FFFFFF;
+  padding-right: 4rem;
+}
+
+.nav-links-container a:nth-child(3) {
+  background-color: #FC7531;
+  padding: 1rem 2rem;
+  border-radius: 0.2rem;
+}
+
+.nav-links-container {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 2rem 0rem;
+  color: #FFFFFF;
+}
+
+
+.form-container {
+  width: 50%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+u {
+  text-decoration-color: #2E2ECC;
+  margin-top: 5rem;
+}
+
+.hero-img-container {
+  height: 50vh;
+  display: flex;
+  width: 100vw;
+  justify-content: space-evenly;
+  margin: 2rem 1rem;
+}
+
+img {
+  height: 50vh;
+  border-radius: 2%;
+}
+
+.hero-img-container button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #FC7531;
+  color: #FFFFFF;
+  border: 0px;
+  border-radius: 10px;
+  margin: 5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 15rem;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.hero-img-container button:hover {
+  box-shadow: 0 0 10rem 0.1rem #011E2D;
+  transform: scale(115%);
+}
+
+.hero-img-container button:nth-child(3)  {
+  margin-right: 0.1rem;
+  background-color: #011E2D;
+}
+
+.hero-img-container button:nth-child(3):hover  {
+  margin-right: 0.1rem;
+  box-shadow: 0 0 10rem 0.1rem #FC7531;
+}
+
+.hero-img-container h1 {
+  margin-top: 4rem;
+}
+
+span {
+  background: -webkit-linear-gradient(#FC7531, #F65504);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.food-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+.restaurant {
+  margin-right: 1rem;
+  text-align: left;
+}
+
+.delivery-info {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.delivery-info p {
+  margin-right: 10px;
+  background-color: #FC7531;
+  color: #FFFFFF;
+  border: 1px solid #F65504;
+  border-radius: 0.2rem;
+  padding: 0.3rem;
+}
+
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.restaurant h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  border-bottom: 0.2rem solid #F65504;
+  display: inline-block;
+  font-family: sans-serif;
+  text-align: left;
+}
+
+.restaurant img {
+  height: 16rem;
+  width: 24rem;
+}
+
+.restaurant p {
+  margin: 0.2rem;
+}
+
+.nearby {
+  margin-left: 10rem;
+}
+/* FORM */
+
+.form-container {
+  height: 90vh;
+  width: 60%;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.form-container button {
+  width: 20%;
+  height: 5%;
+  margin: 2rem 0rem;
+  border: 0;
+  border-radius: 0.3rem;
+}
+
+.form-container h2 {
+  background-color: #FC7531;
+  padding: 2rem;
+  width: 80%;
+  border-radius: 1rem;
+  border-bottom: 0.3rem solid #F65504;
+  border-right: 0.2rem solid #F65504;
+}
+
+.sauce-radio {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-gap: 0.9rem; 
+  width: 50%;
+  margin-left: 1rem;
+}
+
+.sauce-radio label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sauce-radio input[type="radio"] {
+  appearance: none; 
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #ffffff; 
+  outline: none;
+  cursor: pointer;
+}
+
+
+.sauce-radio input[type="radio"]:checked {
+  border-color: #F65504; 
+}
+
+.topping-checkbox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates two equal-width columns */
+  gap: 10px; /* Adds spacing between the checkboxes */
+  width: 50%;
+  margin-left: 1rem;
+}
+
+.topping-checkbox label {
+  display: flex; 
+  justify-content: space-between;
+}
+
+.topping-checkbox input[type="checkbox"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #FFFFFF;
+  outline: none;
+  cursor: pointer;
+  
+}
+
+.topping-checkbox input[type="checkbox"]:checked {
+  background-color: #F65504;
+}
+
+
+@media only screen and (max-width: 1650px) {
+  .hero-img-container img {
+    height: 45vh;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .hero-img-container button {
+    margin-top: 2rem;
+    margin-right: 8px;
+    width: 10rem;
+  }
+  .hero-img-container img {
+    margin-top: 4rem;
+    height: 35vh;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  nav h1{
+    font-size: 1.0rem;
+    width: 40%;
+    height: 0rem;
+    margin-right: 0;
+    margin-left: 1rem;
+  }
+
+  .nav-links-container a{
+    font-size: 0.9rem;
+    padding: 1rem;
+    width: 80%;
+    margin-right: 0;
+  }
+
+  .nav-links-container {
+    margin-left: 0;
+    margin-right: 0rem;
+    margin-top: 1.5rem;
+  
+  }
+
+  .nav-links-container a:nth-child(3) {
+    background-color: #FC7531;
+    padding: 0.5rem 1rem;
+    border-radius: 0.2rem;
+    margin-right: 0;
+  }
+
+  .hero-img-container {
+    height: 50vh;
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+    flex-direction: column-reverse;
+    margin-bottom: 7rem;
+    margin-left: 0;
+  }
+  
+  .hero-img-container button {
+    margin: 1rem;
+  }
+
+  .hero-img-container img {
+    margin-top: 3rem; 
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    height: 39vh;
+    object-fit: cover;
+  }
+
+  .hero-img-container h1 {
+    margin-top: 4px;
+  }
+
+  .food-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
